@@ -92,7 +92,7 @@ transform: rotateY(180deg); /* Começa invertido para virar do jeito certo */
 <div class="flashcard">
 <div class="flashcard-inner">
 <div class="flashcard-front">
-<p>O Falavão que o mundo ia cabar no ano 2000.</p>
+<p>O Falavam que o mundo ia cabar no ano 2000.</p>
 </div>
 <div class="flashcard-back">
 <p>Falso</p>
