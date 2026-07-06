@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flashcards verdadeiro ou falso</title>
+<style>
+/* Configuração Geral da Página */
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #010162;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+margin: 0;
+}
+
+/* Container dos Flashcards */
+.container {
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+justify-content: center;
+padding: 20px;
+}
+
+/* O Flashcard (Configura o efeito 3D) */
+.flashcard {
+background-color: transparent;
+width: 300px;
+height: 200px;
+perspective: 1000px; /* Cria a profundidade do efeito 3D */
+cursor: pointer;
+}
+
+/* O elemento interno que realmente gira */
+.flashcard-inner {
+position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: transform 0.6s;
+transform-style: preserve-3d; /* Mantém os lados em 3D */
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+border-radius: 10px;
+}
+
+/* Ativa a rotação ao passar o mouse */
+.flashcard:hover .flashcard-inner {
+transform: rotateY(180deg);
+}
+
+/* Estilo comum para a Frente e o Verso */
+.flashcard-front, .flashcard-back {
+position: absolute;
+width: 100%;
+height: 100%;
+-webkit-backface-visibility: hidden; /* Suporte para navegadores antigos */
+backface-visibility: hidden; /* Esconde o lado oposto */
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 20px;
+box-sizing: border-box;
+border-radius: 10px;
+font-size: 1.1rem;
+font-weight: 500;
+}
+
+/* Estilo da Frente (Pergunta) */
+.flashcard-front {
+background-color: #80d0f5;
+color: #333333;
+border: 2px solid #0a0404;
+}
+
+/* Estilo do Verso (Resposta) */
+.flashcard-back {
+background-color: #171192;
+color: #ffffff;
+transform: rotateY(180deg); /* Começa invertido para virar do jeito certo */
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- Card 1 -->
+<div class="flashcard">
+<div class="flashcard-inner">
+<div class="flashcard-front">
+<p>O menor osso do corpo humano está no ouvido.</p>
+</div>
+<div class="flashcard-back">
+<p>verdadeiro</p>
+</div>
+</div>
+</div>
+
+<!-- Card 2 -->
+<div class="flashcard">
+<div class="flashcard-inner">
+<div class="flashcard-front">
+<p>Os seres humanos têm dois rins</p>
+</div>
+<div class="flashcard-back">
+<p>verdadeiro.</p>
+</div>
+</div>
+</div>
+
+<!-- Card 3 -->
+<div class="flashcard">
+<div class="flashcard-inner">
+<div class="flashcard-front">
+<p>Os morcegos são totalmente cegos</p>
+</div>
+<div class="flashcard-back">
+<p>falso.</p>
+</div>
+</div>
+</div>
+</body>
+</html>
